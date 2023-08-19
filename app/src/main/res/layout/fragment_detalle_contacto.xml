@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.crearContactos.DetalleContactoFragment">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="254dp"
+        android:layout_height="192dp"
+        android:layout_marginTop="-12dp"
+        android:src="@drawable/profile_data"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/profile_data" />
+
+    <TextView
+        android:id="@+id/tvNombreContacto"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="64dp"
+        android:fontFamily="@font/poppins_medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        tools:text="@string/lbl_nombre_de_usuario" />
+
+    <TextView
+        android:id="@+id/tvApellidoContacto"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/poppins_medium"
+        app:layout_constraintEnd_toEndOf="@+id/tvNombreContacto"
+        app:layout_constraintStart_toStartOf="@+id/tvNombreContacto"
+        app:layout_constraintTop_toBottomOf="@+id/tvNombreContacto"
+        tools:text="@string/lbl_apellido_de_usuario" />
+
+    <TextView
+        android:id="@+id/tvTelefonoContacto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/poppins_medium"
+        app:layout_constraintStart_toEndOf="@+id/imageView3"
+        app:layout_constraintTop_toTopOf="@+id/imageView3"
+        tools:text="@string/lbl_numero_de_telefono" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/baseline_phone_24"
+        app:layout_constraintStart_toStartOf="@+id/tvNombreContacto"
+        app:layout_constraintTop_toBottomOf="@+id/tvApellidoContacto" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:src="@drawable/baseline_today_24"
+        app:layout_constraintStart_toStartOf="@+id/imageView3"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+    <TextView
+        android:id="@+id/tvCumplContacto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_medium"
+        app:layout_constraintStart_toStartOf="@+id/tvTelefonoContacto"
+        app:layout_constraintTop_toTopOf="@+id/imageView4"
+        tools:text="@string/lbl_fecha_de_cumplea_os" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:src="@drawable/baseline_alternate_email_24"
+        app:layout_constraintStart_toStartOf="@+id/imageView4"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+    <TextView
+        android:id="@+id/tvCorreoContacto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_medium"
+        app:layout_constraintStart_toStartOf="@+id/tvCumplContacto"
+        app:layout_constraintTop_toTopOf="@+id/imageView5"
+        tools:text="Correo electronico" />
+
+    <ImageView
+        android:id="@+id/imgContactoHogar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:src="@drawable/cyan_baseline_home_24"
+        app:layout_constraintStart_toStartOf="@+id/imageView5"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+
+    <TextView
+        android:id="@+id/tvUbicacionHogar"
+        android:layout_width="256dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_medium"
+        app:layout_constraintStart_toStartOf="@+id/tvCorreoContacto"
+        app:layout_constraintTop_toTopOf="@+id/imgContactoHogar"
+        tools:text="Ubicacion de casa contacto" />
+
+    <Button
+        android:id="@+id/btnCompartirContacto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/lbl_compartir_contacto"
+        app:icon="@drawable/baseline_share_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnAbrirHogar" />
+
+    <Button
+        android:id="@+id/btnAbrirHogar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="24dp"
+        android:text="Abrir"
+        app:icon="@drawable/ic_home_black_24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvUbicacionTrabajo" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/cyan_baseline_business_24"
+        app:layout_constraintStart_toStartOf="@+id/imgContactoHogar"
+        app:layout_constraintTop_toBottomOf="@+id/imgContactoHogar" />
+
+    <TextView
+        android:id="@+id/tvUbicacionTrabajo"
+        android:layout_width="256dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_medium"
+        app:layout_constraintStart_toStartOf="@+id/tvUbicacionHogar"
+        app:layout_constraintTop_toTopOf="@+id/imageView6"
+        tools:text="Ubicacion de trabajo contacto" />
+
+    <Button
+        android:id="@+id/btnAbrirTrabajo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="42dp"
+        android:text="Abrir"
+        app:icon="@drawable/cyan_baseline_business_24"
+        app:layout_constraintStart_toEndOf="@+id/btnAbrirHogar"
+        app:layout_constraintTop_toTopOf="@+id/btnAbrirHogar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

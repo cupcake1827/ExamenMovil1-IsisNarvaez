@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="128dp"
+        android:layout_height="92dp"
+        android:layout_marginTop="-10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/add_user" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilNombreContacto"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView7">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/txt_nombre_de_contacto" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilApellidoContacto"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tilNombreContacto">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/txt_apellido_de_contacto" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilCorreoContacto"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tilApellidoContacto">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/txt_correo_electronico_de_contacto" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilTelefonoContacto"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tilCorreoContacto">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/txt_numero_de_telefono_de_contacto" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btnCumpleContacto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/lbl_fecha_de_cumplea_os"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tilTelefonoContacto" />
+
+    <TextView
+        android:id="@+id/tvCumpleContacto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:fontFamily="@font/poppins_medium"
+        app:layout_constraintBottom_toBottomOf="@+id/btnCumpleContacto"
+        app:layout_constraintStart_toEndOf="@+id/btnCumpleContacto"
+        app:layout_constraintTop_toTopOf="@+id/btnCumpleContacto"
+        tools:text="DD/MM/AA" />
+
+    <Button
+        android:id="@+id/btnGuardarContacto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/guardar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnUbicacionTrabajo" />
+
+    <Button
+        android:id="@+id/btnUbicacionHogar"
+        android:layout_width="64dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="4dp"
+        app:icon="@drawable/baseline_add_home_24"
+        app:layout_constraintStart_toStartOf="@+id/btnCumpleContacto"
+        app:layout_constraintTop_toBottomOf="@+id/btnCumpleContacto" />
+
+    <Button
+        android:id="@+id/btnUbicacionTrabajo"
+        android:layout_width="64dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:icon="@drawable/baseline_add_business_24"
+        app:layout_constraintStart_toStartOf="@+id/btnUbicacionHogar"
+        app:layout_constraintTop_toBottomOf="@+id/btnUbicacionHogar" />
+
+    <TextView
+        android:id="@+id/tvLatitudHogar"
+        android:layout_width="128dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="4dp"
+        app:layout_constraintStart_toEndOf="@+id/btnUbicacionHogar"
+        app:layout_constraintTop_toTopOf="@+id/btnUbicacionHogar"
+        tools:text="Latitud Hogar" />
+
+    <TextView
+        android:id="@+id/tvLongitudHogar"
+        android:layout_width="128dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="4dp"
+        app:layout_constraintStart_toEndOf="@+id/tvLatitudHogar"
+        app:layout_constraintTop_toTopOf="@+id/tvLatitudHogar"
+        tools:text="Longitud Hogar" />
+
+    <TextView
+        android:id="@+id/tvLatitudTrabajo"
+        android:layout_width="128dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="4dp"
+        app:layout_constraintStart_toEndOf="@+id/btnUbicacionTrabajo"
+        app:layout_constraintTop_toTopOf="@+id/btnUbicacionTrabajo"
+        tools:text="Latitud Trabajo" />
+
+    <TextView
+        android:id="@+id/tvLongitudTrabajo"
+        android:layout_width="128dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="4dp"
+        app:layout_constraintStart_toEndOf="@+id/tvLatitudTrabajo"
+        app:layout_constraintTop_toTopOf="@+id/tvLatitudTrabajo"
+        tools:text="Longitud Trabajo" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

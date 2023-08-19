@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/navigation_ubicaciones">
+
+    <fragment
+        android:id="@+id/navigation_ubicaciones"
+        android:name="hn.uth.examen201820060151.ui.ubicacion.UbicacionFragment"
+        android:label="@string/title_ubicaciones"
+        tools:layout="@layout/fragment_ubicaciones" />
+
+    <fragment
+        android:id="@+id/navigation_contactos"
+        android:name="hn.uth.examen201820060151.ui.contactos.ContactosFragment"
+        android:label="@string/title_contactos"
+        tools:layout="@layout/fragment_contactos" />
+
+    <fragment
+        android:id="@+id/navigation_contactos_dispositivo"
+        android:name="hn.uth.examen201820060151.ui.contactos.ContactosDispositivoFragment"
+        android:label="@string/title_contactos_dispositivo"
+        tools:layout="@layout/fragment_contactos_dispositivo" />
+
+    <fragment
+        android:id="@+id/crearContactoFragment"
+        android:name="hn.uth.contactoxtra.ui.crearContactos.CrearContactoFragment"
+        android:label="Crear Contacto"
+        tools:layout="@layout/fragment_crear_contacto" />
+
+    <fragment
+        android:id="@+id/detalleContactoFragment"
+        android:name="hn.uth.examen201820060151.ui.crearContactos.DetalleContactoFragment"
+        android:label="Ver detalles del contacto"
+        tools:layout="@layout/fragment_detalle_contacto" />
+
+    <fragment
+        android:id="@+id/actualizarContactoFragment"
+        android:name="hn.uth.examen201820060151.ui.crearContactos.ActualizarContactoFragment"
+        android:label="Actualizar Contacto"
+        tools:layout="@layout/fragment_crear_contacto" />
+
+    <fragment
+        android:id="@+id/detalleUbicacionFragment"
+        android:name="hn.uth.examen201820060151.ui.ubicacion.DetalleUbicacionFragment"
+        android:label="Ver detalles de la ubicacion"
+        tools:layout="@layout/fragment_detalle_ubicacion" />
+
+    <action
+        android:id="@+id/action_ubicacionesFragment_to_detalleUbicacionFragment"
+        app:destination="@id/detalleUbicacionFragment" />
+
+    <action
+        android:id="@+id/action_contactosDispositivoFragment_to_crearContactoFragment"
+        app:destination="@id/crearContactoFragment" />
+
+    <action
+        android:id="@+id/action_contactosFragment_to_actualizarContactoFragment"
+        app:destination="@id/actualizarContactoFragment" />
+
+    <action
+        android:id="@+id/action_contactosFragment_to_detalleContactoFragment"
+        app:destination="@id/detalleContactoFragment" />
+
+    <action
+        android:id="@+id/action_fragmentActual_to_crearContactoFragment"
+        app:destination="@id/crearContactoFragment" />
+
+    <action
+        android:id="@+id/action_crearContactoFragment_to_contactosDispositivoFragment"
+        app:destination="@id/navigation_contactos_dispositivo" />
+
+
+
+
+</navigation>
